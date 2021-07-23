@@ -12,7 +12,8 @@
     <artifactId>bakuman-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>bakuman-test-service</module>
+        <module>bakuman-provider-service</module>
+        <module>bakuman-customer-service</module>
     </modules>
     <dependencies>
         <dependency>
@@ -22,6 +23,10 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba.cloud</groupId>-->

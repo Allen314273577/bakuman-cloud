@@ -10,7 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>bakuman-gateway</artifactId>
-
+    <properties>
+        <gateway.version>2.2.6.RELEASE</gateway.version>
+    </properties>
 
     <dependencies>
         <!-- Spring Boot Begin -->
@@ -37,7 +39,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
-            <version>2.2.6.RELEASE</version>
+            <version>${gateway.version}</version>
         </dependency>
         <!-- Spring Cloud End -->
     </dependencies>
