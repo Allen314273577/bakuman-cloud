@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        #      nacos注册中心
+        server-addr: http://linux.bakuman.cn
+        namespace: bakuman-${spring.profiles.active}
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+      config:
+#        nacos配置中心
+        server-addr: http://linux.bakuman.cn
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace: bakuman-${spring.profiles.active}
+        shared-configs:
+          - data-id: bakuman-common-datasource.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: bakuman-common-redis.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true
