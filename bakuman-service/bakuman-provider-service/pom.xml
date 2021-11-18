@@ -11,5 +11,17 @@
 
     <artifactId>bakuman-provider-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.bakuman</groupId>
+            <artifactId>bakuman-api-customer</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.bakuman</groupId>
+            <artifactId>bakuman-common-base</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
+    </dependencies>
 </project>

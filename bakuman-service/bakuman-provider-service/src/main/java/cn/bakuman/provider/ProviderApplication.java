@@ -4,7 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
@@ -13,7 +15,9 @@ import java.time.LocalDateTime;
  * @Author 梦叶
  */
 @SpringCloudApplication
+@EnableFeignClients
 @Slf4j
+@ComponentScan(basePackages = {"cn.bakuman","cn.bakuman.api"})
 public class ProviderApplication {
     @Value("${spring.datasource.url}")
     private String DATASOURCE_URL;
