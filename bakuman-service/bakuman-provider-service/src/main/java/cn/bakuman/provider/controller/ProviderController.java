@@ -35,8 +35,8 @@ public class ProviderController {
     @ApiOperation("测试feign接口")
     @GetMapping("testfeign")
     public R testfeign(@RequestParam("str") String str) {
-        R<Date> test = custmoerClient.test(str);
-        Date body = test.getData();
+        R<String> test = custmoerClient.test(str);
+        String body = test.getData();
         return R.success(body);
     }
 }

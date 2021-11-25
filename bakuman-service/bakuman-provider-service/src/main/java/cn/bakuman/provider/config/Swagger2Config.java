@@ -1,5 +1,6 @@
 package cn.bakuman.provider.config;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -22,6 +23,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
+@EnableKnife4j
 public class Swagger2Config {
 
 
@@ -29,6 +31,7 @@ public class Swagger2Config {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
+                .pathMapping("provider")
                 .select()
                 // 自行修改为自己的包路径
                 .apis(RequestHandlerSelectors.basePackage("cn.bakuman.provider.controller"))
@@ -38,8 +41,8 @@ public class Swagger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("百应admin文档")
-                .description("manage api 提供")
+                .title("梦叶Swagger文档")
+                .description("梦叶提供")
                 // 服务条款网址
                 .version("1.0")
                 .contact(new Contact("ice", "http://blog.bakuman.cn", "314273577@qq.com"))

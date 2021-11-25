@@ -1,6 +1,7 @@
 package cn.bakuman.base.common.model;
 
 import cn.bakuman.base.common.enums.ResponesEnum;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +16,16 @@ import java.io.Serializable;
 public class R<T> implements Serializable {
     private static final long serialVersionUID = 1206834903869667508L;
 
+    /**
+     * @see ResponesEnum
+     */
+    @ApiModelProperty("状态码")
     private int code;
 
+    @ApiModelProperty("响应体数据")
     private T data;
 
+    @ApiModelProperty("message")
     private String message;
 
     public R(ResponesEnum responesEnum) {

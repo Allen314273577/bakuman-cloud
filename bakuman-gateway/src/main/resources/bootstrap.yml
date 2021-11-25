@@ -5,3 +5,26 @@ spring:
     active: dev
   application:
     name: bakuman-gateway-service
+  cloud:
+    gateway:
+      #      开启服务名动态路由
+      discovery:
+        locator:
+          enabled: true
+      #          配置路由规则
+      routes:
+        - id: provider-route
+          uri: lb://bakuman-provider-service
+          predicates:
+            - Path=/provider/**
+          filters:
+            - StripPrefix=1
+        - id: customer-route
+          uri: lb://bakuman-customer-service
+          predicates:
+            - Path=/customer/**
+          filters:
+            - StripPrefix=1
+
+      #白名单
+

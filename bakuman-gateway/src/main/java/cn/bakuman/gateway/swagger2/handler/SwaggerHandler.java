@@ -28,6 +28,9 @@ public class SwaggerHandler {
         this.uiConfiguration = uiConfiguration;
     }
 
+    /**
+     * Swagger安全配置，支持oauth和apiKey设置
+     */
     @GetMapping("/configuration/security")
     public Mono<ResponseEntity<SecurityConfiguration>> securityConfiguration() {
         return Mono.just(new ResponseEntity<>(
@@ -35,12 +38,18 @@ public class SwaggerHandler {
                 HttpStatus.OK));
     }
 
+    /**
+     * Swagger UI配置
+     */
     @GetMapping("/configuration/ui")
     public Mono<ResponseEntity<UiConfiguration>> uiConfiguration() {
         return Mono.just(new ResponseEntity<>(
                 Optional.ofNullable(uiConfiguration).orElse(UiConfigurationBuilder.builder().build()), HttpStatus.OK));
     }
 
+    /**
+     * Swagger资源配置，微服务中这各个服务的api-docs信息
+     */
     @GetMapping
     public Mono<ResponseEntity<List<SwaggerResource>>> swaggerResources() {
         return Mono.just((new ResponseEntity<>(swaggerResources.get(), HttpStatus.OK)));
