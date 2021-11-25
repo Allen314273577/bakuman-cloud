@@ -9,7 +9,7 @@ spring:
         username: nacos
         password: nacos
       config:
-#        nacos配置中心
+        #        nacos配置中心
         server-addr: http://linux.bakuman.cn
         file-extension: yaml
         group: DEFAULT_GROUP
@@ -19,5 +19,8 @@ spring:
             group: DEFAULT_GROUP
             refresh: true
           - data-id: bakuman-common-redis.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: bakuman-common-base.${spring.cloud.nacos.config.file-extension}
             group: DEFAULT_GROUP
             refresh: true

@@ -21,3 +21,6 @@ spring:
           - data-id: bakuman-common-redis.${spring.cloud.nacos.config.file-extension}
             group: DEFAULT_GROUP
             refresh: true
+          - data-id: bakuman-common-base.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true

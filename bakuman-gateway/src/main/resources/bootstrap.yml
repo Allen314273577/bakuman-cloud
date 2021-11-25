@@ -6,6 +6,17 @@ spring:
   application:
     name: bakuman-gateway-service
   cloud:
+    nacos:
+      config:
+        #        nacos配置中心
+        server-addr: http://linux.bakuman.cn
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace: bakuman-${spring.profiles.active}
+        shared-configs:
+          - data-id: bakuman-common-base.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true
     gateway:
       #      开启服务名动态路由
       discovery:
@@ -25,6 +36,3 @@ spring:
             - Path=/customer/**
           filters:
             - StripPrefix=1
-
-      #白名单
-
