@@ -1,0 +1,9 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: bakuman-auth-service
+#    redis
+  redis:
+    host: linux.bakuman.cn
+    port: 6379
