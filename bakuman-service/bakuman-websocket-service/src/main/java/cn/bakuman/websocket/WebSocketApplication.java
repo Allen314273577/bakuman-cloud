@@ -1,16 +1,15 @@
-package cn.bakuman.customer;
+package cn.bakuman.websocket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @Author 梦叶
+ * @date 2021/12/29 17:55
  */
-@EnableFeignClients
 @SpringCloudApplication
-public class CustomerApplication {
+public class WebSocketApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CustomerApplication.class, args);
+        SpringApplication.run(WebSocketApplication.class, args);
     }
 }

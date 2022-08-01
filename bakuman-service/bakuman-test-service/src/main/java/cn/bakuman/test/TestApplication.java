@@ -1,16 +1,15 @@
-package cn.bakuman.customer;
+package cn.bakuman.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @Author 梦叶
+ * @date 2021/12/3 15:08
  */
-@EnableFeignClients
 @SpringCloudApplication
-public class CustomerApplication {
+public class TestApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CustomerApplication.class, args);
+        SpringApplication.run(TestApplication.class, args);
     }
 }
