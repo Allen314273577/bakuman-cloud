@@ -31,7 +31,6 @@ public class Swagger2Config {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .pathMapping("provider")
                 .select()
                 // 自行修改为自己的包路径
                 .apis(RequestHandlerSelectors.basePackage("cn.bakuman.provider.controller"))
