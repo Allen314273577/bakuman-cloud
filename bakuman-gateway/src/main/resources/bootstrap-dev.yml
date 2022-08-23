@@ -1,9 +1,0 @@
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: http://linux.bakuman.cn
-        namespace: bakuman-${spring.profiles.active}
-        group: DEFAULT_GROUP
-        username: nacos
-        password: nacos
