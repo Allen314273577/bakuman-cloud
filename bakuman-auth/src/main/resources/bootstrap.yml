@@ -3,5 +3,7 @@ server:
 spring:
   application:
     name: bakuman-auth-service
-  profiles:
-    active: dev
+#    redis
+  redis:
+    host: linux.bakuman.cn
+    port: 6379

@@ -69,10 +69,5 @@
             <artifactId>bakuman-common-base</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>cn.bakuman</groupId>
-            <artifactId>bakuman-common-config</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 </project>
